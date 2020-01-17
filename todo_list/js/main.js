@@ -1,10 +1,11 @@
 const addButton = document.querySelector('.addButton');
 const container = document.querySelector('.container');
-
+var submittedTasks = [];
+ 
 //creo el div
 let itemDiv = document.createElement('div');
 itemDiv.classList.add('item');
-itemDiv.id = 'item';
+//itemDiv.id = 'item';
 
 //creo el p
 let pItem = document.createElement('p');
@@ -27,16 +28,25 @@ itemDiv.appendChild(removeButton);
 function getInputValue() {
     var inputVal = document.getElementById('user-input').value;
 
-    if (inputVal != "") {
-        var theID = document.getElementById('p_item_id')
-        pItem.innerHTML = inputVal;
+    if (inputVal !== "") {
+        pItem.innerHTML = inputVal; //acá asigno el valor al "p" en el HTML
+        submittedTasks.push(inputVal);
+
+        // for (i = 0; i < submittedTasks.length; i++){
+        //     // if (submittedTasks[i] != submittedTasks[i++]) {
+
+        // //    } 
+        // }
     } 
-    console.log(inputVal)
+    console.log(inputVal);
+    console.log(submittedTasks);
 }
 
 var prueba = container.appendChild(itemDiv);
 
 console.log(prueba);
 
+
+getInputValue();
 
 
