@@ -28,6 +28,7 @@ itemDiv.appendChild(removeButton);
 function getInputValue() {
     var inputVal = document.getElementById('user-input').value;
 
+    
     if (inputVal !== "") {
         pItem.innerHTML = inputVal; //acá asigno el valor al "p" en el HTML
         submittedTasks.push(inputVal);
